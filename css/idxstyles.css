@@ -426,7 +426,7 @@ input:focus, select:focus {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: .33fr .33fr .33fr;
-        justify-self: center;
+        justify-items: center;
         max-width: unset;
         min-width: unset;
         padding-top: .1em;
@@ -533,6 +533,7 @@ input:focus, select:focus {
         justify-content: center;
     }
 }
+
 
 
 
