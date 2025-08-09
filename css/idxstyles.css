@@ -430,6 +430,8 @@ input:focus, select:focus {
         max-width: unset;
         min-width: unset;
         padding-top: .1em;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 0;
     }
 
@@ -531,6 +533,7 @@ input:focus, select:focus {
         justify-content: center;
     }
 }
+
 
 
 
