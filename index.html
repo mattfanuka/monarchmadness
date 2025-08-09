@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <link rel="stylesheet" href="../public/css/idxstyles.css">
+    <link rel="icon" type="image/x-icon" href="./img/images/monarch favicon (1).png">
+    <title>Monarch Madness</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href='.'><img class="logo" src="./img/images/monarch-madness-logo.png"></a>
+        </div>
+        <div class="links">
+            <a href="." class="link">Main Page</a>
+            <a href="./pages/about-monarchs.html" class="link">About</a>  
+            <a href="./pages/sighting-list.html" class="link">List</a>
+        </div> 
+    </div>
+    <div class="container">
+        <main>
+            <search>
+                <label for="address" id="search-label">Where did you see the Monarch?</label><br>
+                <input id="address" name="address" type="search">
+                <button id="search">Search</button>
+            </search>
+            <form>    
+                <div class="data-field">
+
+                </div>
+            </form>
+            <div class="map-container">
+                <div class="key">
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/red-key.png"> <p>Jan - Feb</p>
+                    </div>
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/orange-key.png"> <p>Mar - Apr</p>
+                    </div>
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/yellow-key.png"> <p>May - Jun</p>
+                    </div>
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/green-key.png"> <p>July - Aug</p>
+                    </div>
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/blue-key.png"> <p>Sept - Oct</p>
+                    </div>
+                    <div class="key-item">
+                        <img class="key-img" src="./img/key-images/violet-key.png"> <p>Nov - Dec</p>
+                    </div>
+                </div>
+                <div id="map">
+
+                </div>
+                <div class="map-options">
+                    <fieldset id="year-selector">
+                        <legend>Filter by Year</legend>
+                        <select id="year">
+                            <option id="2025" value="2025">2025</option>
+                            <option id="2026" value="2026">2026</option>
+                            <option id="2027" value="2027">2027</option>
+                        </select>
+                    </fieldset>
+                    <fieldset id="map-month-selector">
+                        <legend>Filter by Month</legend>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="0" name="jan-feb" checked>
+                            <label for="0">Jan-Feb</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="1" name="mar-apr" checked>
+                            <label for="1">Mar-Apr</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="2" name="may-jun" checked>
+                            <label for="2">May-Jun</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="3" name="july-aug" checked>
+                            <label for="3">July-Aug</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="4" name="sept-oct" checked>
+                            <label for="4">Sept-Oct</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class='checkbox' id="5" name="nov-dec" checked>
+                            <label for="5">Nov-Dec</label>
+                        </div>
+                    </fieldset>
+                    <div class="option-buttons">
+                        <button id="filter">Filter</button>
+                        <button id="all-checks">Toggle</button>
+                    </div>    
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script type='module' src="js/index.js"></script>
+</body>
+</html>

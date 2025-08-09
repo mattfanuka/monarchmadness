@@ -1,0 +1,243 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/background/Monarch\ Madness\ BG.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(40px);
+    animation: fadeIn .75s backwards;
+}
+
+.header {
+    height: 5em;
+    width: 100%;
+    margin: 0em auto 3em auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #ffffff;
+    color: black;
+    animation: slideIn 1s cubic-bezier(0,1.07,.89,1) backwards;
+    animation-delay: 0.25s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    grid-column: 1;
+}
+
+.logo img {
+    height: 7em;
+    width: auto;
+    margin: -1em 5em;
+}
+
+.links {
+    grid-column: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 5em;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0.5em 0.5em;
+    font-weight: 700;
+    font-size: 1.35em;
+    border: 2px solid #003D20;
+    border-radius: 10px;
+    color: #003D20;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;  
+    transition: color 0.2s ease-out;
+    z-index: 1;
+    text-decoration: none;
+    min-width: 5em;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #003D20;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.link:hover {
+    color: #ff6003;
+}
+
+.link:hover::after {
+    transform: translateY(0%);
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    height: 15em;
+    width: auto;
+}
+
+.container {
+    margin: 2em auto;
+    padding: 0 3em;
+    height: auto;
+    width: 80%;
+    max-width: 1750px;
+    min-width: 900px;
+    color: #FFFFFF;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    justify-content: space-evenly;
+    border-bottom: solid rgb(255, 82, 13);
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    justify-content: space-evenly;
+    margin: 1em auto;
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 100%;}
+}
+
+@media screen and (max-width: 1180px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body, html {
+        width: 100vw;
+        height: auto;
+    }
+    
+    .header {
+        display: grid;
+        grid-template-columns: .25fr .75fr;
+        height: 4em;
+        width: 100%;
+        margin: 0;
+        vertical-align: middle;
+    }
+    
+    .links {
+        width: 100%;
+        height: 100%;
+        margin: .1em 0;
+        margin-right: 0;
+        display: flex;
+        justify-content: flex-end; /* push links a bit left */
+        align-items: center;
+        margin: 0;
+        padding-left: 0.5em; /* small offset from edge */
+        padding-right: 0.25em;
+    }
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75em;
+        width: 5.5em;
+        height: 3em;
+        margin: 0.5em 0.15em;
+        padding: 0.15em;
+        
+    }
+    .logo {
+        left: 2px;
+        top: 5px;
+        position: static;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: .15em;
+    }
+    .logo img {
+        margin: 0;
+        width: 85px;
+        height: auto;
+        justify-self: start;
+    }
+    .container {
+        width: 93vw;
+        max-width: unset;
+        min-width: unset;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 1em 0;
+        margin-top: 0;
+    }
+
+    h1 {
+        margin: 0.1em;
+        font-size: 1.5em;
+    }
+
+    .total-sightings {
+        margin: 0.1em 0 0.5em;
+        font-size: 0.75em;
+    }
+
+    .fields {
+        font-size: 0.5em;
+    }
+
+    .entry h3 {
+        font-size: 0.6em;
+        font-weight: 200;
+    }
+}
+
+@media screen and (min-width: 625px) {
+    .entry h3 {
+        font-size: 1em;
+        font-weight: 600;
+    }
+}

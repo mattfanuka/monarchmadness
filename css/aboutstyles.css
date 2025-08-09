@@ -1,0 +1,325 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/background/Monarch\ Madness\ BG.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(40px);
+    animation: fadeIn .75s backwards;
+}
+
+.header {
+    height: 5em;
+    width: 100%;
+    margin: 0em auto 3em auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #ffffff;
+    color: black;
+    animation: slideIn 1s cubic-bezier(0,1.07,.89,1) backwards;
+    animation-delay: 0.25s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    grid-column: 1;
+}
+
+.logo img {
+    height: 7em;
+    width: auto;
+    margin: -1em 5em;
+}
+
+.links {
+    grid-column: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 5em;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0.5em 0.5em;
+    font-weight: 700;
+    font-size: 1.35em;
+    border: 2px solid #003D20;
+    border-radius: 10px;
+    color: #003D20;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;  
+    transition: color 0.2s ease-out;
+    z-index: 1;
+    text-decoration: none;
+    min-width: 5em;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #003D20;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.link:hover {
+    color: #ff6003;
+}
+
+.link:hover::after {
+    transform: translateY(0%);
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    height: 15em;
+    width: auto;
+}
+
+.about-MM {
+    margin-bottom: 0.25em;
+    font-family: 'Hyperwave';
+    font-size: 10em;
+    font-weight: 300;
+    color: #FF7300;
+}
+
+.container {
+    margin: 2em auto;
+    padding: 3em;
+    height: auto;
+    width: 80%;
+    max-width: 1750px;
+    min-width: 900px;
+    color: #FFFFFF;
+}
+
+.description {
+    text-align: left;
+}
+
+p {
+    margin: 0 auto 1em auto;
+    font-size: 1.5em;
+}
+
+h1 {
+    margin: 0 auto 0.5em auto;
+}
+
+#male-vs-female {
+    height: 25em;
+    width: auto;
+    object-fit: scale-down;
+    float: left;
+    border-radius: 5px;
+    margin: 0 3em 0 0;
+}
+
+.about-section {
+    margin: 0 auto 1em auto;
+}
+
+.gallery {
+    position: relative;
+    height: 25em;
+    width: 25em;
+    object-fit: cover;
+    float: right;
+    border-radius: 5px;
+    margin: 0 3em;
+}
+
+.gallery-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.prev {
+    padding: 0.05em 0.25em 0.1em;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 5px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.40);
+    user-select: none;
+}
+
+.next {
+    padding: 0.05em 0.25em 0.1em;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    right: 5px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.40);
+    user-select: none;
+}
+
+.gallery-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+    background-color: rgba(0, 0, 0, 0.40);
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 100%;}
+}
+
+@font-face {
+    font-family: 'Hyperwave';
+    src: url("../fonts/hyperwave-one.ttf");
+}
+
+@media screen and (max-width: 1180px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body, html {
+        width: 100vw;
+        height: auto;
+    }
+    
+    .header {
+        display: grid;
+        grid-template-columns: .25fr .75fr;
+        height: 4em;
+        width: 100%;
+        margin: 0;
+        vertical-align: middle;
+    }
+    
+    .links {
+        width: 100%;
+        height: 100%;
+        margin: .1em 0;
+        margin-right: 0;
+        display: flex;
+        justify-content: flex-end; /* push links a bit left */
+        align-items: center;
+        margin: 0;
+        padding-left: 0.5em; /* small offset from edge */
+        padding-right: 0.25em;
+    }
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75em;
+        width: 5.5em;
+        height: 3em;
+        margin: 0.5em 0.15em;
+        padding: 0.15em;
+        
+    }
+    .logo {
+        left: 2px;
+        top: 5px;
+        position: static;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: .15em;
+    }
+    .logo img {
+        margin: 0;
+        width: 85px;
+        height: auto;
+        justify-self: start;
+    }
+    .container {
+        width: 93vw;
+        max-width: unset;
+        min-width: unset;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 1em 0;
+        margin-top: 0;
+    }
+
+    .about-MM {
+        font-size: 4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #male-vs-female {
+        height: 200px;
+        width: auto;
+        margin-right: 1em;
+    }
+
+    .gallery {
+        height: 200px;
+        width: 200px;
+        margin: 0;
+    }
+
+    .prev, .next {
+        font-size: 15px;
+    }
+
+    .gallery-desc {
+        font-size: 0.75em;
+    }
+}
