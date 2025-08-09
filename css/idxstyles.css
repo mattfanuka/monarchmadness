@@ -391,6 +391,10 @@ input:focus, select:focus {
         margin-bottom: 1em;
     }
 
+    search {
+        padding: 1em;
+    }
+
     input, select {
         height: 2em;
         width: 95%;
@@ -527,5 +531,6 @@ input:focus, select:focus {
         justify-content: center;
     }
 }
+
 
 
