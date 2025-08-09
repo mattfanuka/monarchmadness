@@ -231,6 +231,23 @@ h1 {
     * {
         box-sizing: border-box;
     }
+
+    body {
+        background-attachment: scroll;
+    }
+
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/background/Monarch Madness BG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    }
     
     body, html {
         width: 100vw;
@@ -322,4 +339,5 @@ h1 {
     .gallery-desc {
         font-size: 0.75em;
     }
+
 }
