@@ -15,6 +15,7 @@ body {
 html, body {
     padding: 0;
     margin: 0;
+    color-scheme: light only;
 }
 
 .container {
@@ -509,3 +510,4 @@ input:focus, select:focus {
         justify-content: center;
     }
 }
+
